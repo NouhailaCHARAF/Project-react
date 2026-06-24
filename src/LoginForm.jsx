@@ -22,9 +22,7 @@ const datafelter=datajat.find((item)=>item.email===email && item.password===pass
  }
  else{
   alert("not existe!")
- }
-
-
+ }    
 
   setEmail("")
   setPassword("")
