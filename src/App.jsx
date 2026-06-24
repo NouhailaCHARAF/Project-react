@@ -21,7 +21,9 @@ function App() {
    
    
    
-  <Header/>
+  <Header />
+ 
+
  
  <main className="min-h-screen">
 

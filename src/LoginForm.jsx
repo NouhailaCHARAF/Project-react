@@ -12,7 +12,19 @@ const[show, setShow]=useState(false)
 const  handleSubmit=(e)=>{
 e.preventDefault();
 
-alert(`Email : ${email} | Password : ${password}`)
+const datajat=JSON.parse(localStorage.getItem('keydata'))
+
+const datafelter=datajat.find((item)=>item.email===email && item.password===password)
+
+ if(datafelter){
+
+  alert("Deja existe!")
+ }
+ else{
+  alert("not existe!")
+ }
+
+
 
   setEmail("")
   setPassword("")

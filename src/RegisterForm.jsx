@@ -21,18 +21,26 @@ export default function RegistrationForm() {
     } else {
       setMessage("🎉 Registration Successful!");
 
+        const datastor=localStorage.getItem('keydata')
+        const datatrans=datastor? JSON.parse(datastor):[];
+
+      const dataTotal=[...datatrans, formData]
+
+      localStorage.setItem('keydata',JSON.stringify(dataTotal))
+
       setFormData({
         email: "",
         password: "",
         confirmpassword: "",
       });
+      
     }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
       <form
-        onSubmit={handleSubmit}
+        onSubmit={(e)=>handleSubmit(e)}
         className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg"
       >
         <h2 className="text-3xl font-bold text-center mb-6">

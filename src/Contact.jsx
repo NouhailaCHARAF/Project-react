@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function Contact() {
 
-
+   
 
     const[list ,setList]=useState({
        
@@ -12,6 +12,7 @@ export default function Contact() {
     })
     
     const [arList,setArList]=useState([])
+    const[message,setMessage]=useState(false)
 
    const SendFunction=(e)=>{
        e.preventDefault()
@@ -26,6 +27,9 @@ export default function Contact() {
        localStorage.setItem('dataContact',data)
 
        setList({ name: "", email: "", message: "" });
+
+     setMessage(prev=>!prev)
+      
 
    }
 
@@ -47,7 +51,16 @@ export default function Contact() {
    },[])
    
 
-  
+
+    
+     const deteUser = (indexToDelete)=>{
+     
+
+     const newList=arList.filter((_,index)=>index !== indexToDelete)
+      setArList(newList)
+      localStorage.setItem("dataContact",JSON.stringify(arList))
+
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -114,8 +127,11 @@ export default function Contact() {
           </button>
 
         </form>
+       
       </div>
-
+        <div className="flex justify-center items-center  ">
+          <p className=" bg-green-100  "> {message && "Congratulations !"}</p>
+        </div>
 
      <div className="max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-sm border border-gray-100 mt-10">
   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
@@ -130,6 +146,7 @@ export default function Contact() {
           <th className="px-6 py-4 font-medium">Name</th>
           <th className="px-6 py-4 font-medium">Email</th>
           <th className="px-6 py-4 font-medium">Message</th>
+          <th className="px-6 py-4 font-medium">Statut</th>
         </tr>
       </thead>
       
@@ -137,11 +154,12 @@ export default function Contact() {
         
        {arList.map((item,index)=>(
 
-          <tr key={index}>
+          <tr key={index} >
 
-        <td className="border border-gray-300" >{item.name} </td>
-        <td className="border border-gray-300" >{item.email} </td>
-        <td className="border border-gray-300" >{item.message} </td>
+        <td className="border border-gray-300 p-3" >{item.name} </td>
+        <td className="border border-gray-300 p-3" >{item.email} </td>
+        <td className="border border-gray-300 p-3" >{item.message} </td>
+        <td className="flex gap-3 justify-center items-center p-3"><button className=" py-2 bg-red-500 rounded-lg text-white px-3" onClick={()=>deteUser(index)}>Delete</button></td>
           </tr>
        
 
