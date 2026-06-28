@@ -9,6 +9,7 @@ import Contact from './Contact'
 import Footer from './Footer'
 import RegistrationForm from './RegisterForm'
 import LoginForm from './LoginForm'
+import CartPage from './CartPage'
 
 
 
@@ -35,7 +36,7 @@ function App() {
    <Route path="/contact" element={<Contact />}/>
    <Route path="/registration" element={<RegistrationForm />}/>
    <Route path="/login" element={<LoginForm />}/>
-   
+   <Route path="/cart" element={<CartPage />}/>
 
    </Routes>
    </main>

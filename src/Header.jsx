@@ -14,7 +14,7 @@ const cardItem=data? JSON.parse(data):[]
 setCartCount(cardItem.length)
 
 
-})
+},[])
 
 
 return(
@@ -51,7 +51,7 @@ return(
             </li>
             
             <li>
-             <div className="relative inline-block p-2 cursor-pointer group">
+             <Link to="/cart" className="relative inline-block p-2 cursor-pointer group">
   
   <svg 
     className="w-7 h-7 text-gray-700 transition duration-300 group-hover:text-yellow-500" 
@@ -67,7 +67,7 @@ return(
       <span>{cartCount}</span>
     </div>
  
-</div>
+</Link>
             </li> 
           </ul>
         </nav>

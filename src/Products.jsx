@@ -39,7 +39,7 @@ localStorage.setItem("product",JSON.stringify(listUp))
          
          {listProduct.map((item)=> (
 
-            <a href="#" className="group relative block overflow-hidden">
+            <a value={item.id} className="group relative block overflow-hidden">
             <button className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
             <span className="sr-only">Wishlist</span>
 
@@ -58,7 +58,7 @@ localStorage.setItem("product",JSON.stringify(listUp))
             <p className="mt-1.5 text-sm text-gray-700">{item.price}</p>
 
             <form className="mt-4">
-            <button className="block w-full rounded-sm bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"  value={item.id} onClick={(e)=>addToCart(item,e)}>
+            <button className="block w-full rounded-sm bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"   onClick={(e)=>addToCart(item,e)}>
              Add to Cart
             </button>
            </form>
