@@ -34,8 +34,3 @@ The platform is designed as a **Single Page Application (SPA)** with isolated, r
 
 ---
 
-## 🚀 Installation & Local Development
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
