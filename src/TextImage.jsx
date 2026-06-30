@@ -34,7 +34,7 @@ export default function TextImage(){
         
         <div className="flex justify-center md:justify-end">
           <img
-            src="\public\bag.jpg"
+            src="/bag.jpg"
             alt="Hero"
             className="w-full max-w-md rounded-2xl shadow-lg object-cover"
           />

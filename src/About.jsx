@@ -38,7 +38,7 @@ export default function About(){
     
     <div>
       <img
-        src="\public\bag.jpg"
+        src="/bag.jpg"
         alt="About image"
         className="rounded-2xl shadow-lg w-full object-cover"
       />

@@ -6,7 +6,7 @@ export default function Slider(){
  
   return (
    
-<section className="bg-white lg:grid lg:h-screen lg:place-content-center dark:bg-gray-900 bg-[url('\public\slider.png')] bg-cover bg-center" >
+<section className="bg-white lg:grid lg:h-screen lg:place-content-center dark:bg-gray-900 bg-[url('/slider.png')] bg-cover bg-center" >
   <div className="mx-auto w-screen max-w-7xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32">
     <div className="max-w-prose text-left bg-[#0000005c] p-[45px] border rounded-r-xl">
       <h1 className="text-4xl font-bold text-white sm:text-5xl dark:text-white">
